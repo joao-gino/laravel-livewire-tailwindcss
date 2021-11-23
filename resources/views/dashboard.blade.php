@@ -1,5 +1,7 @@
 @extends('home')
 
 @section('content')
-<livewire:companies/>
+
+<livewire:dashboard />
+
 @endsection

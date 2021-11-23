@@ -6,10 +6,16 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    colors: {
+      blue: {
+        cesari: '#354B83'
+      }
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['motion-safe'],
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

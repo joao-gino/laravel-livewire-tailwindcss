@@ -20,6 +20,6 @@ class CompanyController extends Controller
             'phone' => request('phone'),
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('company');
     }
 }

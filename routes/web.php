@@ -18,17 +18,13 @@ use App\Models\Employee;
 */
 
 Route::get('/', function (Company $company) {
-    return view('home');
-})->name('home');
+    return view('dashboard');
+})->name('dashboard');
 
-Route::get('/companies', function (Company $company) {
-    return view('companies')->with('companies', $company->all());
+Route::get('/companies', function (Companies $company) {
+    return view('companies');
 })->name('company');
 
 Route::get('/employees', function (Company $company, Employee $employee) {
-    return view('employee')->with('companies', $company->all())->with('employees', $employee->all());   
+    return view('employee');   
 })->name('employee');
-
-Route::post('employee/create', [EmployeeController::class, 'create'])->name('employee.create');
-
-Route::post('company/create', [CompanyController::class, 'create'])->name('company.create');
